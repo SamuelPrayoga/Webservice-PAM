@@ -16,7 +16,7 @@ class CreateTransaksiDetailsTable extends Migration
         Schema::create('transaksi_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('transaksi_id')->unsigned();
-            $table->integer('poduk_id')->unsigned();
+            $table->integer('produk_id')->unsigned();
             $table->integer('total_item')->unsigned();//untuk total item dari 1 barang
             $table->text('catatan')->nullable();
             $table->integer('total_harga')->unsigned()->nullable();
