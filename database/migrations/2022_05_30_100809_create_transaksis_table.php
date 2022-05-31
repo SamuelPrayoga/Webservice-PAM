@@ -14,12 +14,12 @@ class CreateTransaksisTable extends Migration
     public function up()
     {
         Schema::create('transaksis', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('kode_payment');
-            $table->string('kode_trx');//trx itu transaksi
-            $table->integer('total_item')->unsigned();//total keseluruhan
-            $table->bigInteger('total_harga')->unsigned();//keseluruhan
+            $table->string('kode_trx');
+            $table->integer('total_item')->unsigned();
+            $table->bigInteger('total_harga')->unsigned();
             $table->integer('kode_unik')->unsigned();
             $table->string('status')->nullable();
             $table->string('resi')->nullable();
@@ -30,7 +30,7 @@ class CreateTransaksisTable extends Migration
             $table->string('deskripsi')->nullable();
             $table->string('metode')->nullable();
             $table->timestamp('expired_at')->nullable();
-            $table->timestamps();//update_at dan created_at
+            $table->timestamps();
         });
     }
 

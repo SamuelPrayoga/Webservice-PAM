@@ -5,16 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
+        <title>Delcanteen</title>
+        <link rel="icon" type="image/x-icon" href="{{asset('dist/img/itdel.png')}}">
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: rgb(3, 36, 97);
+                color: #ffffff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -50,7 +51,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -79,15 +80,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{-- <img src="{{asset('dist/img/itdel.png')}}" alt=""> --}}
+                    Admin Delcanteen
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="">Makanan</a>
+                    <a href="">Minuman</a>
+                    <a href="">Pulsa</a>
+                    <a href="">Pemesanan</a>
                 </div>
             </div>
         </div>

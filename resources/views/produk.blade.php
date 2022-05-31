@@ -38,7 +38,7 @@
                                 <th>Deskripsi</th>
                                 <th>Kategori</th>
                                 <th>Gambar</th>
-                                <th style="width: 40px">Action</th>
+                                <th style="width: 110px">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,12 +51,12 @@
                                 <td>{{ $data->category_id }}</td>
                                 <td>{{ $data->image }}</td>
                                 <td>
-                                    <a href="#">
+                                    <a href="#" type="button" class="btn btn-warning btn-sm">
                                         <i class="fa fa-edit blue"></i>
                                     </a>
-                                    /
-                                    <a href="#">
-                                        <i class="fa fa-trash red"></i>
+                                    
+                                    <a href="#" type="button" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash danger"></i>
                                     </a>
                                 </td>
                             </tr>
