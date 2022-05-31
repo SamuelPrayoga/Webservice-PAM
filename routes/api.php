@@ -18,6 +18,10 @@ use Illuminate\Http\Request;
 // });
 Route::post('login',  'Api\UserController@login');  
 Route::post('register',  'Api\UserController@register');  
+<<<<<<< HEAD
 Route::get('produk', 'Api\ProdukController@index');
 Route::post('checkout', 'Api\TransaksiController@store');
 Route::get('checkout/user/{id}', 'Api\TransaksiController@history');
+=======
+Route::get('produk', 'Api\ProdukController@index');
+>>>>>>> f13bcd1b2ce7855ec7e47ef9b3f834745aeea1d2
