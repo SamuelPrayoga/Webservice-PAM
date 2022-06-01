@@ -17,6 +17,10 @@ class TransaksiController extends Controller
             'total_item' => 'required',
             'total_harga' => 'required',
             'name' => 'required',
+            'jasa_pengiriman' => 'required',
+            'ongkir' => 'required',
+            'total_transfer' => 'required',
+            'bank' => 'required',
             'phone' => 'required'
 
         ]);
@@ -80,14 +84,33 @@ class TransaksiController extends Controller
             }
         }
 
-        if(!empty($transaksi)){
+        if(!empty($transaksis)){
             return response()->json([
                 'success' => 1,
                 'message' => 'Transaksi Berhasil',
-                'transaksis' => collect($transaksi)
+                'transaksis' => collect($transaksis)
             ]);
         }else{
             $this->error('Transaksi Gagal');
+        }
+    }
+
+    public function batal($id){
+        $transaksi = Transaksi::where('id', $id)->first();
+        if($transaksi){
+            //update data
+
+            $transaksi->update([
+                'status' => 'Batal'
+            ]);
+
+            return response()->json([
+                'success' => 1,
+                'message' => 'Berhasil',
+                'transaksi' => $transaksi
+            ]);
+        }else{
+            return $this->error('Gagal Load Transaksi');
         }
     }
 

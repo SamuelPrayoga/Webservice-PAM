@@ -62,7 +62,7 @@
           <img src="{{asset('dist/img/baru2.gif')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          <a href="/home" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -86,7 +86,7 @@
 
           <li class="nav-item">
             <a href="{{ route('home') }}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
                 <!--<span class="right badge badge-danger">New</span>-->
@@ -98,6 +98,15 @@
               <i class="nav-icon fa fa-shopping-bag"></i>
               <p>
                 Produk
+                <!--<span class="right badge badge-danger">New</span>-->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('transaksi.index') }}" class="nav-link">
+              <i class="nav-icon fa fa-credit-card"></i>
+              <p>
+                Transaksi
                 <!--<span class="right badge badge-danger">New</span>-->
               </p>
             </a>

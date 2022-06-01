@@ -38,26 +38,23 @@
                                 <th>Deskripsi</th>
                                 <th>Kategori</th>
                                 <th>Gambar</th>
-                                <th style="width: 110px">Action</th>
+                                <th style="width: 140px">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $i=1 ?>
                             @foreach ($listUser as $data )
                             <tr>
-                                <td>{{ $data->id }}</td>
+                                <td>{{ $i++ }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>{{"Rp. ".number_format($data->harga)  }}</td>
                                 <td>{{ $data->deskripsi }}</td>
                                 <td>{{ $data->category_id }}</td>
                                 <td>{{ $data->image }}</td>
                                 <td>
-                                    <a href="#" type="button" class="btn btn-warning btn-sm">
-                                        <i class="fa fa-edit blue"></i>
-                                    </a>
+                                    <a href="{{route ('transaksiBatal', $data->id) }}" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i> Hapus</a>
                                     
-                                    <a href="#" type="button" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash danger"></i>
-                                    </a>
+                                    <a href="{{route ('transaksiBatal', $data->id) }}" type="button" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i> Edit</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -95,11 +92,11 @@
                                     <div class="form-group">
                                         <label>Kategori</label>
                                         <select class="form-control" name="category_id">
-                                        <option value="1">option 1</option>
-                                        <option value="1">option 2</option>
-                                        <option value="1">option 3</option>
-                                        <option value="1">option 4</option>
-                                        <option value="1">option 5</option>
+                                        <option value="1">Makanan Kantin</option>
+                                        <option value="2">Minuman Kantin</option>
+                                        <option value="3">Pulsa</option>
+                                        <option value="4">Barang Koperasi</option>
+                                        <option value="5">Makanan/Minuman Koperasi</option>
                                         </select>
                                     </div>
                                 </div>
