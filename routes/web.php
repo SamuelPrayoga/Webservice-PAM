@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\ProductController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,3 +28,8 @@ Route::get('/transaksi/batal/{id}', 'TransaksiController@batal')->name('transaks
 Route::get('/transaksi/confirm/{id}', 'TransaksiController@confirm')->name('transaksiConfirm');
 Route::get('/transaksi/kirim/{id}', 'TransaksiController@kirim')->name('transaksiKirim');
 Route::get('/transaksi/selesai/{id}', 'TransaksiController@selesai')->name('transaksiSelesai');
+
+// Route::get('/product/editproduct/{id}', [ProductController::class, 'editproduct']);
+// Route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct'])->name('product.updateproduct');
+// Route::get('product/deleteproduct/{id}', [ProductController::class, 'deleteproduct'])->name('product.deleteproduct');
+

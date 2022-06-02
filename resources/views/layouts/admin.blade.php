@@ -217,5 +217,7 @@
       bsCustomFileInput.init();
     });
 </script>
+
+@yield('js')
 </body>
 </html>

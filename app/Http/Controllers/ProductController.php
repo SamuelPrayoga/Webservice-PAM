@@ -26,7 +26,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        //make function create produk 
+        
     }
 
     /**
@@ -92,8 +93,34 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy($id){
+
     }
+
+
+    // public function editproduct($id)
+    // {
+    //     $editproduct = Produk::find($id);
+    //     return view('editproduct', compact('editproduct'));
+    // }
+
+    // public function updateproduct(Request $request, $id)
+    // {
+    //     $update = Produk::find($id);
+    //     $update->name = $request->name;
+    //     $update->harga = $request->harga;
+    //     $update->deskripsi = $request->deskripsi;
+    //     $update->category_id = $request->category_id;
+
+    //     $update->save();
+    //     return redirect('produk');
+    // }
+
+    // public function deleteproduct($id)
+    // {
+    //     $deleteproduct = Produk::find($id);
+    //     if($deleteproduct->delete()){
+    //         return redirect()->back();
+    //     }
+    // }
 }

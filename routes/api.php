@@ -24,3 +24,6 @@ Route::post('checkout', 'Api\TransaksiController@store');
 Route::get('checkout/user/{id}', 'Api\TransaksiController@history');
 
 Route::post('checkout/batal/{id}', 'Api\TransaksiController@batal');
+
+Route::post('produk', 'Api\ProdukController@delete')->name('deleteProduct');
+Route::post('produk-update', 'Api\ProdukController@update')->name('updateProduct');
